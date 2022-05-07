@@ -1,0 +1,59 @@
+Zadanie 1
+
+zamowienia(id_produktu, nazwa_produktu, id_klienta, nazwa_klienta, 
+data_zamowienia, cena_produktu, ilość, VAT, suma_brutto, suma_netto) 
+
+
+1. Id_produktu -> nazwa_produktu, cena_produktu, VAT
+
+2. Id_klienta -> nazwa_klienta (może być na odwrót, ze względu na to, że nazwa klienta jest unikalna ??)
+
+3. Nazwa_produktu -> id_produktu, cena_produktu, VAT (ze względu na unikalność nazwy??)
+
+
+
+
+Zależności funkcyjne wielowartościowe:
+
+1. Cena_produktu, ilość -> suma_netto (zależność funkcyjna wielowartościowa, nietrywialna)
+
+2. Suma_netto, VAT -> suma_brutto (zależność funkcyjna wielowartościowa, nietrywialna)
+
+3. Data_zamówienia, id_klienta, id_produktu  -> nazwa_klienta, nazwa_produktu, cena_netto, cena_brutto, VAT, ilość
+
+ 
+Zadanie 2 - Wypisz wszystkie klucze kandydujące.
+
+Klucze kandydyjące:
+-id_produktu+id_klienta+data_zamówienia, 
+
+
+
+Zadanie 3
+
+pomieszczenia(id_pomieszczenia, numer_pomieszczenia, id_budynku, 
+powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy) 
+
+
+Zależności funkcyjne: 
+1. Id_pomieszczenia -> numer_pomieszczenia, liczba_okien, liczba_drzwi, powierzchnia
+
+2. Id_budynku -> powierzchnia, ulica
+
+3. Kod_pocztowy -> miasto
+
+4. numer_pomieszczenia -> Id_pomieszczenia, liczba_okien, liczba_drzwi, powierzchnia
+
+
+Zależności funkcyjne wielowartościowe:
+
+1.ulica, miasto -> kod pocztowy
+
+Klucze kandydujące:
+-id_pomieszczenia
+-id_pomieszczenia+id_budynku, 
+
+
+
+
+
